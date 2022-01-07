@@ -153,7 +153,7 @@ async def placa(ctx):
 async def cnpj(ctx, cnpj):
     
     data = requests.get(f"https://api-publica.speedio.com.br/buscarcnpj?cnpj={cnpj}").json()
-
+    print()
     try:
         embed = discord.Embed(
             title='',
