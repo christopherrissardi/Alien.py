@@ -21,6 +21,6 @@ Itens corrigidos:
 
 Correção feita apenas para organizar o repositório e deixar o projeto guardado como recordação do meu primeiro bot desenvolvido "parcialmente".
 
----
+
 
 
