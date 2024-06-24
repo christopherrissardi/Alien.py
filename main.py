@@ -5,8 +5,12 @@ import os
 from typing import Text
 from discord.ext import commands
 
-client = commands.Bot(command_prefix=".", case_insensitive=False, help_command=None)
 
+intents = discord.Intents.default()
+intents.members = True
+intents.message_content = True
+
+client = commands.Bot(command_prefix='.', intents=intents)
 
 @client.event
 async def on_ready():
@@ -92,7 +96,7 @@ async def nome(ctx):
     )
 
     embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤㅤCONSULTA DE NOME', icon_url='')
-    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url='')
 
     await ctx.send(embed=embed)
 
@@ -109,7 +113,7 @@ async def cpf(ctx):
     )
 
     embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤㅤCONSULTA DE CPF', icon_url='')
-    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url='')
 
     await ctx.send(embed=embed)
 
@@ -126,7 +130,7 @@ async def telefone(ctx):
     )
 
     embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤㅤCONSULTA DE TELEFONE', icon_url='')
-    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url='')
 
     await ctx.send(embed=embed)
 
@@ -143,7 +147,7 @@ async def placa(ctx):
     )
 
     embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤㅤCONSULTA DE PLACA', icon_url='')
-    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url='')
 
     await ctx.send(embed=embed)
 
@@ -175,7 +179,7 @@ async def cnpj(ctx, cnpj):
         embed.add_field(name="➢ CNAE Código", value=data['CNAE PRINCIPAL CODIGO'], inline=False)
         embed.add_field(name="➢ CNAE Código", value=data['COMPLEMENTO'], inline=False)
         embed.set_author(name='ㅤㅤㅤㅤㅤㅤㅤCONSULTA DE CNPJ ', icon_url='https://cdn-icons.flaticon.com/png/512/4151/premium/4151858.png?token=exp=1641266909~hmac=2cddb88d70dc89e429a8175901424a57')
-        embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+        embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url='')
         
 
         await ctx.send(embed=embed)
@@ -231,7 +235,7 @@ async def ip(ctx, ip):
     embed.add_field(name="➢ Empresa Responsável", value=data['org'], inline=False)
     embed.add_field(name="➢ Tipo de Conexão", value=data['type'], inline=False)
     embed.set_author(name='ㅤﾠㅤ   CONSULTA DE IP', icon_url='https://cdn-icons-png.flaticon.com/512/6434/6434897.png')
-    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url='')
     embed.set_thumbnail(url=data['country_flag'])
 
     await ctx.send(embed=embed)
@@ -270,7 +274,7 @@ async def covid(ctx, covid):
     embed.add_field(name="➢ Descartados", value=data['refuses'], inline=False)
     embed.add_field(name="➢ Atualização", value=data['datetime'], inline=False)
     embed.set_author(name='ㅤCONSULTA DE COVID19ㅤㅤㅤ', icon_url='https://cdn-icons.flaticon.com/png/512/5428/premium/5428573.png?token=exp=1641268025~hmac=fb2ee7ad00ddbf8a5a1cf67a15f04945')
-    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url='')
 
     await ctx.send(embed=embed)
 
@@ -310,7 +314,7 @@ async def cep(ctx, cep):
     embed.add_field(name="➢ IBGE", value=data['city_ibge'], inline=False)
     embed.add_field(name="➢ DDD", value=data['ddd'], inline=False)
     embed.set_author(name='ㅤㅤCONSULTA DE CEPㅤㅤㅤㅤ', icon_url='https://cdn-icons-png.flaticon.com/512/2642/2642502.png')
-    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url='')
 
     await ctx.send(embed=embed)
 
@@ -347,7 +351,7 @@ async def banco(ctx, banco):
     embed.add_field(name="➢ Código Bancário", value=data['code'], inline=False)
     embed.add_field(name="➢ Informações Adicionais", value=data['fullName'], inline=False)
     embed.set_author(name='ㅤㅤㅤCONSULTA DE BANCOㅤㅤㅤ', icon_url='https://cdn-icons.flaticon.com/png/512/1041/premium/1041584.png?token=exp=1641266545~hmac=506f329c4c0c70a61d42fe5f4abea701')
-    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url='')
 
     await ctx.send(embed=embed)
 
@@ -385,7 +389,7 @@ async def bin(ctx, bin):
     embed.add_field(name="➢ Sigla do País", value=data['countrycode'], inline=False)
     embed.add_field(name="➢ Banco", value=data['bank'], inline=False)
     embed.set_author(name='ㅤㅤㅤCONSULTA DE BINㅤㅤㅤㅤㅤㅤ', icon_url='https://i.imgur.com/U18eyhV.png')
-    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url='')
 
     await ctx.send(embed=embed)
 
@@ -393,7 +397,7 @@ async def bin(ctx, bin):
 
 @client.command()
 async def site(ctx, site):
-    
+    data = requests.get(f"http://ipwhois.app/json/{ip}").json()
     embed = discord.Embed(
         title='',
         colour=58879
@@ -409,7 +413,7 @@ async def site(ctx, site):
     embed.add_field(name="➢ Empresa", value=data['org'], inline=False)
     embed.add_field(name="➢ Fuso Horário", value=data['timezone'], inline=False)
     embed.set_author(name='USE ')
-    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url='')
 
     await ctx.send(embed=embed)
 
@@ -484,7 +488,7 @@ async def ping(ctx):
     embed.add_field(name='➢ Ping do servidor', value=f"{round(client.latency * 1000)} ms", inline=False)
     embed.set_author(name='ㅤㅤㅤCONSULTA DE PINGㅤㅤㅤㅤ', icon_url='https://cdn-icons-png.flaticon.com/512/2695/2695903.png')
     embed.set_image(url='')
-    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url='')
 
     await ctx.send(embed=embed)
 
@@ -521,8 +525,8 @@ async def traduzir(ctx):
     embed.set_thumbnail(url="https://cdn.iconscout.com/icon/free/png-256/languages-1891105-1598018.png")
     embed.add_field(name="Use o comando", value='/traduzir "Texto" LÍNGUA (Exemplo: en, es, pt)', inline=False)
     embed.set_author(name='COMANDO PARA TRADUÇÃO', icon_url='https://cdn-icons-png.flaticon.com/512/484/484531.png')
-    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url=ctx.author.avatar_url)
+    embed.set_footer(text='Requested By {}'.format(ctx.author), icon_url='')
 
     await ctx.send(embed=embed)
 
-client.run('ODk0MDE0Nzk2Nzc1NjkwMjcw.YVj2KQ.pAi2T-enFcthkZ-NIMSTglHZ2hI')
+client.run('...')
