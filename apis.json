@@ -1,0 +1,13 @@
+{
+"numero":["http://ifind.chapada.com.br:7777/?token={YOUR_TOKEN}&tel={TELEFONE}", "OFF"],
+"nome":["http://ifind.chapada.com.br:7777/?token={YOUR_TOKEN}&nome={NOME}", "OFF"],
+"cpf":["http://ifind.chapada.com.br:7777/?token={YOUR_TOKEN}&cpf={CPF}", "OFF"],
+"cnpj":["https://api-publica.speedio.com.br/buscarcnpj?cnpj={cnpj}", "ON"],
+"placa":["https://apicarros.com/v1/consulta/{PLACA}", "OFF"],
+"ip":["http://ipwhois.app/json/{IP}", "ON"],
+"cep":["https://cep.awesomeapi.com.br/json/{CEP}", "ON"],
+"covid":["https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/{ESTADO}", "ON"],
+"bin":["https://api.bincodes.com/bin/?format=json&api_key={YOUR_API_KEY}&bin={bin}", "ON"],
+"banco":["https://brasilapi.com.br/api/banks/v1/{BANCO}", "ON"],
+"clima":["https://api.weatherapi.com/v1/current.json?key={YOUR_API_KEY}={LOCAL}&aqi=no", "ON"]
+}
