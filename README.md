@@ -4,7 +4,7 @@
 
 ![qamt5fje5pm71](https://github.com/cristopherrissardi/Alien.py/assets/93612872/db5f9ca6-efde-4bec-aa82-94e286c999b7)
 
-O projeto em questão é referente a um bot do discord iniciado em Outubro de 2021 com intuito de ser o primeiro bot de consulta de dados de todo o discord. Por falta de recurso e de APIs, não foi possível implementar os recursos que era desejado na época, então por esse motivo o atual projeto foi descontinuado.
+O projeto em questão é referente a um bot do discord iniciado em Outubro de 2021 com intuito de ser o primeiro bot de consulta de dados de todo o discord. Por falta de recurso e de APIs, não foi possível implementar os recursos que era desejado na época, então por esse motivo o projeto foi descontinuado. Posteriormente vieram outros dois projetos: [Al Capone](https://github.com/cristopherrissardi/Al-Capone-Bot) e [Whois Alien](https://github.com/cristopherrissardi/Whois-Alien-Bot), projeto mais atualizado e ativo atualmente.
 
 A última atualização foi apenas para corrigir algumas falhas que o bot apresentava devido ao tempo e a não atualização do mesmo por vários anos. 
 
