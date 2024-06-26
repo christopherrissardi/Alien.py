@@ -24,8 +24,8 @@ Correção feita apenas para organizar o repositório e deixar o projeto guardad
 
 ## OBSERVAÇÃO:
 
-- Todas as APIS usadas no projeto são APIS públicas mesmo aquelas que possuem APIKEY. Algumas das APIs que possuem chave de autenticação estão desativadas!!!
-- O Projeto em si só foi alterado/corrigido itens para que voltasse a funcionar, o resto permanece da forma que está para manter a integridade do bot e que possa ficar como recordação.
+- Todas as APIS usadas no projeto são APIS públicas, mesmo aquelas que possuem APIKEY. Algumas das APIs que possuem chave de autenticação estão desativadas!!!
+- O Projeto por si só foi apenas alterado/corrigido itens para que voltasse a funcionar, o resto permanece integro e não foi alterado.
 
  Fiquem a vontade para usar o bot como fonte de inspiração para novos projetos ou até mesmo para estudos.
 
